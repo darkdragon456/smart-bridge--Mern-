@@ -41,8 +41,8 @@ FRONTEND_URL=http://localhost:3000
 4️⃣ Start the development servers
 Backend
 cd backend
-npm run dev
+npx nodemon index.js
 
 Frontend
 cd frontend
-npm start
+npm run dev
