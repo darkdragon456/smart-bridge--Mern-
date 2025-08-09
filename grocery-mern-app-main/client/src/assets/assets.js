@@ -287,7 +287,7 @@ export const dummyProducts = [
   // Fruits
   {
     _id: "ek51j12k",
-    name: "apple 1 kg",
+    name: "Apple 1 kg",
     category: "Fruits",
     price: 120,
     offerPrice: 110,

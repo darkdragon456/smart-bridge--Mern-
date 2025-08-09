@@ -1,3 +1,4 @@
+
 import { assets } from "../assets/assets";
 import { useAppContext } from "../context/AppContext";
 
@@ -12,6 +13,7 @@ const ProductCard = ({ product }) => {
     navigate(`/product/${product.category.toLowerCase()}/${product._id}`);
     scrollTo(0, 0);
   };
+  
 
   return (
     <div

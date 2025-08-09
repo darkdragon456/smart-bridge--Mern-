@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { dummyProducts } from "../assets/assets";
+
 import toast from "react-hot-toast";
 import axios from "axios";
 axios.defaults.withCredentials = true;   
@@ -90,15 +90,21 @@ export const AppContextProvider = ({ children }) => {
   };
   // total cart amount
   const totalCartAmount = () => {
-    let totalAmount = 0;
-    for (const items in cartItems) {
-      let itemInfo = products.find((product) => product._id === items);
-      if (cartItems[items] > 0) {
-        totalAmount += cartItems[items] * itemInfo.offerPrice;
-      }
+  let totalAmount = 0;
+
+  for (const itemId in cartItems) {
+    const itemInfo = products.find((product) => product._id === itemId);
+
+    if (itemInfo && cartItems[itemId] > 0) {
+      totalAmount += cartItems[itemId] * itemInfo.offerPrice;
+    } else if (!itemInfo) {
+      console.warn(`Product with ID ${itemId} not found in products list.`);
     }
-    return Math.floor(totalAmount * 100) / 100;
-  };
+  }
+
+  return Math.floor(totalAmount * 100) / 100;
+};
+
   // remove product from cart
   const removeFromCart = (itemId) => {
     let cartData = structuredClone(cartItems);
