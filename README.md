@@ -1,48 +1,12 @@
-🛒 Grocery MERN App
-A full-stack grocery shopping application built with MongoDB, Express.js, React.js, and Node.js.
-This app allows users to browse grocery products, add them to the cart, place orders, and make payments securely via Stripe.
+# React + Vite
 
-🚀 Features
-User Authentication (JWT-based login & signup)
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Product Management (Admin can add, edit, delete products)
+Currently, two official plugins are available:
 
-Shopping Cart (Add, remove, update items)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-Order Placement (Cash on Delivery / Stripe Payment)
+## Expanding the ESLint configuration
 
-Responsive UI using Bootstrap
-
-Real-time Stock Updates 
-
- 1️⃣ Clone the repository
-
-git clone https://github.com/your-username/grocery-mern-app.git
-cd grocery-mern-app
-
-2️⃣ Install dependencies
-Backend
-cd backend
-npm install<img width="1920" height="1080" alt="Screenshot 2025-08-09 185701" src="https://github.com/user-attachments/assets/71c08083-177c-4d92-9090-924da1aac99b" />
-
-Frontend
-cd frontend
-npm install
-
-3️⃣ Set up environment variables
-Create a .env file inside backend folder:
-env
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-STRIPE_SECRET_KEY=your_stripe_secret
-FRONTEND_URL=http://localhost:3000
-
-4️⃣ Start the development servers
-Backend
-cd backend
-npx nodemon index.js
-
-Frontend
-cd frontend
-npm run dev
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
