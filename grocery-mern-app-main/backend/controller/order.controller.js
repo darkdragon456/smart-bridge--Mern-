@@ -1,6 +1,6 @@
 import Order from "../models/order.model.js";
 import Product from "../models/product.model.js";
-import Stripe from "stripe";
+
 
 // Place Order via Cash on Delivery
 export const placeOrderCOD = async (req, res) => {
